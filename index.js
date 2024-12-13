@@ -175,9 +175,11 @@
 // Ajuste la fonction qui prend en paramètre un tableau et qui doit ajouter le nombre 1 à chaque élément du tableau.
 // Exemple : [1, 2, 3] => [2, 3, 4]
 
-// export const incrementArray = () => {}
+//export const incrementArray = (arr) => {
+//	return arr.map((num) => num + 1);
+//};
 
-// console.info("Exercice 11 : ", incrementArray([1, 2, 3]));
+//console.info("Exercice 11 : ", incrementArray([1, 2, 3]));
 
 //----------------------------------------------------------------------------------------------//
 // EXERCICE 12
@@ -185,9 +187,11 @@
 // Ajuste la fonction qui prend en paramètre un tableau de string et qui doit retourner un tableau avec la longueur de chaque string.
 // Exemple : ["Hello", "World"] => [5, 5]
 
-// export const getLengths = () => {}
+//export const getLengths = (arr) => {
+//	return arr.map((str) => str.length);
+//};
 
-// console.info("Exercice 12 : ", getLengths(["Hello", "World"]));
+//console.info("Exercice 12 : ", getLengths(["Hello", "World"]));
 
 //----------------------------------------------------------------------------------------------//
 // EXERCICE 13
@@ -195,9 +199,11 @@
 // Ajuste la fonction qui prend en paramètre un tableau de string et qui doit retourner un tableau avec toutes les premières lettres de chaque string.
 // Exemple : ["Hello", "World"] => ["H", "W"]
 
-// export const getFirstLetters = () => {}
+//export const getFirstLetters = (arr) => {
+//	return arr.map((str) => str[0]);
+//};
 
-// console.info("Exercice 13 : ", getFirstLetters(["Hello", "World"]));
+//console.info("Exercice 13 : ", getFirstLetters(["Hello", "World"]));
 
 //----------------------------------------------------------------------------------------------//
 // EXERCICE 14
@@ -205,9 +211,11 @@
 // Ajuste la fonction qui prend en paramètre un tableau de string et qui doit retourner un tableau avec toutes les dernières lettres de chaque string.
 // Exemple : ["Hello", "World"] => ["o", "d"]
 
-// export const getLastLetters = () => {}
+//export const getLastLetters = (arr) => {
+//	return arr.map((str) => str[str.length - 1]);
+//};
 
-// console.info("Exercice 14 : ", getLastLetters(["Hello", "World"]));
+//console.info("Exercice 14 : ", getLastLetters(["Hello", "World"]));
 
 //----------------------------------------------------------------------------------------------//
 // EXERCICE 15
