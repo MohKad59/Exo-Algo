@@ -325,9 +325,19 @@
 // Écrivez une fonction qui enlève les doubles lettres d'une chaîne donnée.
 // Exemple : removeDoubleLetters("google") // "gogle"
 
-// export const removeDoubleLetters = () => {}
+//export const removeDoubleLetters = (str) => {
+//	let result = "";
 
-// console.info("Exercice 22 : ", removeDoubleLetters("google"));
+//	for (let i = 0; i < str.length; i++) {
+//		if (str[i] !== str[i + 1]) {
+//			result += str[i];
+//		}
+//	}
+
+//	return result;
+//};
+
+//console.info("Exercice 22 : ", removeDoubleLetters("google"));
 
 //----------------------------------------------------------------------------------------------//
 
@@ -335,13 +345,14 @@
 // Écrivez une fonction qui prend un tableau de 10 entiers (entre 0 et 9) et renvoie une chaîne de caractères sous la forme d'un numéro de téléphone.
 // Exemple : createPhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0]) // "(123) 456-7890"
 
-// export const createPhoneNumber = () => {
-//    };
+//export const createPhoneNumber = (numbers) => {
+//	return `(${numbers[0]}${numbers[1]}${numbers[2]}) ${numbers[3]}${numbers[4]}${numbers[5]}-${numbers[6]}${numbers[7]}${numbers[8]}${numbers[9]}`;
+//};
 
-// console.info(
-// 	"Exercice 23 : ",
-// 	createPhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0]),
-// );
+//console.info(
+//	"Exercice 23 : ",
+//	createPhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0]),
+//);
 
 //----------------------------------------------------------------------------------------------//
 // EXERCICE 24
@@ -349,11 +360,17 @@
 // Écrivez une fonction nommée "findMissingLetter" qui prend en paramètre un tableau d'une série de lettres et qui renvoie la lettre manquante de la série.
 // Exemple : findMissingLetter(["a", "b", "c", "d", "f"]) // "e"
 
-// export const findMissingLetter = () => {
+//export const findMissingLetter = (letters) => {
+//	const alphabet = "abcdefghijklmnopqrstuvwxyz";
+//	const start = alphabet.indexOf(letters[0]);
+//	for (let i = 0; i < letters.length; i++) {
+//		if (alphabet[start + i] !== letters[i]) {
+//			return alphabet[start + i];
+//		}
+//	}
+//};
 
-// };
-
-// console.info("Exercice 24 : ", findMissingLetter(["a", "b", "c", "d", "f"]));
+//console.info("Exercice 24 : ", findMissingLetter(["a", "b", "c", "d", "f"]));
 
 //----------------------------------------------------------------------------------------------//
 
@@ -361,13 +378,14 @@
 // Écrivez une fonction qui prend un tableau de string et renvoie un tableau de string triées par ordre alphabétique.
 // Exemple : sortString(["Banana", "Orange", "Apple", "Mango"]) // ["Apple", "Banana", "Mango", "Orange"]
 
-// export const sortString = () => {;
-//   };
+//export const sortString = (strings) => {
+//	return strings.sort();
+//};
 
-// console.info(
-// 	"Exercice 25 : ",
-// 	sortString(["Banana", "Orange", "Apple", "Mango"]),
-// );
+//console.info(
+//	"Exercice 25 : ",
+//	sortString(["Banana", "Orange", "Apple", "Mango"]),
+//);
 
 //----------------------------------------------------------------------------------------------//
 // EXERCICE 26
@@ -376,9 +394,11 @@
 // Exemple : otherAngle(30, 60) // 90
 // Pour trouver le troisième angle, soustrayez la somme des deux angles donnés à 180 degrés.
 
-// export const otherAngle = () => {};
+//export const otherAngle = (angle1, angle2) => {
+//	return 180 - (angle1 + angle2);
+//};
 
-// console.info("Exercice 26 : ", otherAngle(30, 60));
+//console.info("Exercice 26 : ", otherAngle(30, 60));
 
 //----------------------------------------------------------------------------------------------//
 // EXERCICE 27
