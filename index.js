@@ -407,11 +407,20 @@
 // Une année bissextile est divisible par 4, sauf si elle est divisible par 100, à moins qu'elle ne soit également divisible par 400.
 // Exemple : isLeapYear(2020) // true
 
-// export const isLeapYear = () => {
+//export const isLeapYear = (year) => {
+//	if (year % 4 !== 0) {
+//		return false;
+//	}
+//	if (year % 100 !== 0) {
+//		return true;
+//	}
+//	if (year % 400 !== 0) {
+//		return false;
+//	}
+//	return true;
+//};
 
-//   };
-
-// console.info("Exercice 27 : ", isLeapYear(2022));
+//console.info("Exercice 27 : ", isLeapYear(2022));
 
 //----------------------------------------------------------------------------------------------//
 // EXERCICE 28
@@ -421,11 +430,24 @@
 // Le deuxième sous-tableau doit inclure les noms des animaux sauvages.
 // Exemple : sortAnimals(animals) // [["Cat", "Dog"], ["Eagle", "Monkey"]]
 
-// export const sortAnimals = () => {
+//export const sortAnimals = (animals) => {
+//	const domesticAnimals = ["Cat", "Dog"];
+//	const wildAnimals = ["Eagle", "Monkey"];
+//	const domestic = [];
+//	const wild = [];
 
-//   };
+//	for (const animal of animals) {
+//		if (domesticAnimals.includes(animal)) {
+//			domestic.push(animal);
+//		} else if (wildAnimals.includes(animal)) {
+//			wild.push(animal);
+//		}
+//	}
 
-//  console.info("Exercice 28 : ", sortAnimals(["Cat", "Dog", "Eagle", "Monkey"]));
+//	return [domestic, wild];
+//};
+
+//console.info("Exercice 28 : ", sortAnimals(["Cat", "Dog", "Eagle", "Monkey"]));
 
 //----------------------------------------------------------------------------------------------//
 // EXERCICE 29
@@ -434,10 +456,25 @@
 // Exemple : Si on appelle decodeMessage("XUBBE MEHBT"), la fonction doit renvoyer "HELLO WORLD".
 // https://fr.wikipedia.org/wiki/Chiffrement_par_décalage
 
-// export const decodeMessage = () => {
+//export const decodeMessage = (message) => {
+//	const shift = 16;
+//	const alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+//	let decodedMessage = "";
 
-// };
-// console.info("Exercice 29 :", decodeMessage("XUBBE MEHBT"));
+//	for (const char of message) {
+//		if (alphabet.includes(char)) {
+//			const index = alphabet.indexOf(char);
+//			const newIndex = (index - shift + 26) % 26;
+//			decodedMessage += alphabet[newIndex];
+//		} else {
+//			decodedMessage += char;
+//		}
+//	}
+
+//	return decodedMessage;
+//};
+
+//console.info("Exercice 29 :", decodeMessage("XUBBE MEHBT"));
 
 //----------------------------------------------------------------------------------------------//
 // EXERCICE 30
@@ -446,22 +483,33 @@
 // Exemple : calculateScore(["1:0", "2:0", "3:0", "4:4", "2:2", "3:3", "1:4", "2:3", "2:4", "3:3"]) // 13
 // Utilisez une boucle pour parcourir le tableau et une condition pour déterminer les points à ajouter.
 
-// export const calculateScore = () => {
+//export const calculateScore = (results) => {
+//	let score = 0;
 
-// };
+//	for (const result of results) {
+//		const [x, y] = result.split(":").map(Number);
+//		if (x > y) {
+//			score += 3;
+//		} else if (x === y) {
+//			score += 1;
+//		}
+//	}
 
-// console.info(
-// 	"Exercice 30 : ",
-// 	calculateScore([
-// 		"1:0",
-// 		"2:0",
-// 		"3:0",
-// 		"4:4",
-// 		"2:2",
-// 		"3:3",
-// 		"1:4",
-// 		"2:3",
-// 		"2:4",
-// 		"3:3",
-// 	]),
-// );
+//	return score;
+//};
+
+//console.info(
+//	"Exercice 30 : ",
+//	calculateScore([
+//		"1:0",
+//		"2:0",
+//		"3:0",
+//		"4:4",
+//		"2:2",
+//		"3:3",
+//		"1:4",
+//		"2:3",
+//		"2:4",
+//		"3:3",
+//	]),
+//);
