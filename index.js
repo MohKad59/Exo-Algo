@@ -41,9 +41,9 @@
 //	return box;
 //};
 
-//console.log("Exercice 3 : ", removeLastElement([1, 2, 3])); // [1,2]
-//console.log("Exercice 3 : ", removeLastElement([5, 6, 7, 8])); // [5, 6, 7]
-//console.log("Exercice 3 : ", removeLastElement([])); // []
+//console.info("Exercice 3 : ", removeLastElement([1, 2, 3])); // [1,2]
+//console.info("Exercice 3 : ", removeLastElement([5, 6, 7, 8])); // [5, 6, 7]
+//console.info("Exercice 3 : ", removeLastElement([])); // []
 
 //----------------------------------------------------------------------------------------------//
 // EXERCICE 4
@@ -513,3 +513,71 @@
 //		"3:3",
 //	]),
 //);
+//javascript
+/*
+Créé une fonction countLetters qui compte, dans une string donnée, le nombre de fois qu'une lettre apparait.
+
+Exemples :
+* "" et "a" -> 0
+* "a" et "a" -> 1
+* "aaaaabbbaa" et "a" -> 7
+* "bbacbaaa" et "c" -> 1
+* "bbcc" et "a" -> 0
+*/
+//function countLetters(givenString, letter){
+// Your code here !
+//function countLetters(givenString, letter) {
+//	const count = givenString.split("").filter((char) => char === letter).length;
+//	console.info(
+//		`le nombre de fois qu'une lettre apparait"${letter}" dans la chaîne "${givenString}" est : ${count}`,
+//	);
+//	return count;
+//}
+
+//console.info(countLetters("", "a")); // 0
+//console.info(countLetters("a", "a")); // 1
+//console.info(countLetters("aaaaabbbaa", "a")); // 7
+//console.info(countLetters("bbacbaaa", "c")); // 1
+//console.info(countLetters("bbcc", "a")); // 0
+
+//export default countLetters;
+/*
+Créé une fonction getFibonacciSequence qui prend un nombre n en paramètre et retourne un tableau contenant les n premiers nombres de la suite de Fibonacci.
+
+Détails
+
+* La suite de Fibonacci commence par les nombres 0 et 1.
+* Chaque nombre suivant est la somme des deux nombres précédents.
+* Par exemple, pour n = 5, la fonction devrait retourner [0, 1, 1, 2, 3].
+
+Si n est inférieur ou égal à 0, la fonction doit retourner un tableau vide []
+*/
+
+//function getFibonacciSequence(n) {
+// Si le nombre demandé est 0 ou moins, on retourne une liste vide
+//	if (n <= 0) {
+//		return [];
+//	}
+
+// On crée une liste avec les deux premiers nombres de Fibonacci
+//	const sequence = [0, 1];
+
+// On utilise une boucle pour ajouter les autres nombres
+//	for (let i = 2; i < n; i++) {
+// On additionne les deux derniers nombres pour en créer un nouveau
+//		const nextNumber = sequence[i - 1] + sequence[i - 2];
+
+// On ajoute ce nombre à la liste
+//		sequence.push(nextNumber);
+//	}
+
+// On retourne seulement les "n" premiers nombres
+//	return sequence.slice(0, n);
+//}
+
+// ---- TEST ----
+//const n = 5; // On choisit un nombre pour tester
+//const result = getFibonacciSequence(n); // On appelle la fonction
+//console.info("Suite de Fibonacci pour n =", n, ":", result); // On affiche le résultat
+
+//export default getFibonacciSequence;
